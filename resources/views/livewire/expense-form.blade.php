@@ -52,7 +52,7 @@
                             Date <span class="text-red-500">*</span>
                         </label>
                         <input type="date" id="date" wire:model="date"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent @error('date') border-red-500 @enderror">
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 @error('date') border-red-500 @enderror">
                         @error('date')
                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                         @enderror
@@ -64,7 +64,7 @@
                             Title <span class="text-red-500">*</span>
                         </label>
                         <input type="text" id="title" wire:model="title" placeholder="e.g., Grocery Shopping"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent @error('title') border-red-500 @enderror">
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 @error('title') border-red-500 @enderror">
                         @error('title')
                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                         @enderror
@@ -76,7 +76,7 @@
                             Category
                         </label>
                         <select wire:model="category_id" id="category_id"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900">
                             <option value="">Select a category</option>
                             @foreach($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -95,7 +95,7 @@
                         </label>
                         <textarea wire:model="description" id="description" rows="3"
                             placeholder="Add any additional notes..."
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"></textarea>
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-900 resize-none"></textarea>
                     </div>
                 </div>
             </div>
