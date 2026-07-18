@@ -38,7 +38,8 @@
                                 <span class="text-gray-500 text-lg">$</span>
                             </div>
                             <input type="number" id="amount" wire:model="amount" step="0.01" min="0" placeholder="0.00"
-                                class="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent @error('amount') border-red-500 @enderror">
+                                class="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500
+    focus:border-transparent text-gray-900 @error('amount') border-red-500 @enderror"
                         </div>
                         @error('amount')
                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
