@@ -131,7 +131,7 @@
 
                         <div class="relative">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <span class="text-gray-500 text-xl">$</span>
+                                <span class="text-gray-500 text-xl">₹</span>
                             </div>
                             <input type="number" 
                                    id="amount"
@@ -177,21 +177,21 @@
                                         wire:click="applyRecommendation('min')"
                                         class="p-4 bg-white rounded-lg border-2 border-gray-200 hover:border-purple-400 hover:shadow-md transition text-center">
                                     <p class="text-xs text-gray-600 mb-1">Conservative</p>
-                                    <p class="text-2xl font-bold text-gray-900">${{ number_format($aiRecommendation['min'], 0) }}</p>
+                                    <p class="text-2xl font-bold text-gray-900">₹{{ number_format($aiRecommendation['min'], 0) }}</p>
                                 </button>
 
                                 <button type="button"
                                         wire:click="applyRecommendation('recommended')"
                                         class="p-4 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg text-white hover:shadow-xl transition text-center transform hover:scale-105">
                                     <p class="text-xs mb-1 opacity-90">Recommended</p>
-                                    <p class="text-2xl font-bold">${{ number_format($aiRecommendation['recommended'], 0) }}</p>
+                                    <p class="text-2xl font-bold">₹{{ number_format($aiRecommendation['recommended'], 0) }}</p>
                                 </button>
 
                                 <button type="button"
                                         wire:click="applyRecommendation('max')"
                                         class="p-4 bg-white rounded-lg border-2 border-gray-200 hover:border-purple-400 hover:shadow-md transition text-center">
                                     <p class="text-xs text-gray-600 mb-1">Comfortable</p>
-                                    <p class="text-2xl font-bold text-gray-900">${{ number_format($aiRecommendation['max'], 0) }}</p>
+                                    <p class="text-2xl font-bold text-gray-900">₹{{ number_format($aiRecommendation['max'], 0) }}</p>
                                 </button>
                             </div>
 
@@ -223,7 +223,7 @@
                             <p class="text-sm font-medium text-indigo-900 mb-2">Budget Preview:</p>
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <p class="text-2xl font-bold text-indigo-900">${{ number_format($amount, 2) }}</p>
+                                    <p class="text-2xl font-bold text-indigo-900">₹{{ number_format($amount, 2) }}</p>
                                     <p class="text-sm text-indigo-700">
                                         {{ $category_id ? $categories->find($category_id)->name : 'Overall Budget' }}
                                     </p>

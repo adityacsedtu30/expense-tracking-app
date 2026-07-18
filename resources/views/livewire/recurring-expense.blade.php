@@ -122,7 +122,7 @@
                             <!-- Amount -->
                             <div class="flex items-center justify-between">
                                 <span class="text-gray-600">Amount</span>
-                                <span class="text-2xl font-bold text-gray-900">${{ number_format($expense->amount, 2) }}</span>
+                                <span class="text-2xl font-bold text-gray-900">₹{{ number_format($expense->amount, 2) }}</span>
                             </div>
 
                             <!-- Frequency Badge -->

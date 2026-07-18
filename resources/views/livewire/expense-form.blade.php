@@ -35,7 +35,7 @@
                         </label>
                         <div class="relative">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <span class="text-gray-500 text-lg">$</span>
+                                <span class="text-gray-500 text-lg">₹</span>
                             </div>
                             <input type="number" id="amount" wire:model="amount" step="0.01" min="0" placeholder="0.00"
                                 class="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500

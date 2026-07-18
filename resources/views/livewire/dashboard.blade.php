@@ -38,7 +38,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="text-3xl font-bold text-gray-800">${{ number_format($totalSpent, 2) }}</div>
+                <div class="text-3xl font-bold text-gray-800">₹{{ number_format($totalSpent, 2) }}</div>
                 @if($monthlyBudget > 0)
                     <div class="mt-2 text-sm {{ $totalSpent > $monthlyBudget ? 'text-red-600' : 'text-green-600' }}">
                         {{ $totalSpent > $monthlyBudget ? 'Over' : 'Under' }} budget by ${{ number_format(abs($monthlyBudget - $totalSpent), 2) }}
@@ -56,12 +56,12 @@
                         </svg>
                     </div>
                 </div>
-                <div class="text-3xl font-bold text-gray-800">${{ number_format($monthlyBudget, 2) }}</div>
+                <div class="text-3xl font-bold text-gray-800">₹{{ number_format($monthlyBudget, 2) }}</div>
                 @if($monthlyBudget > 0)
                     <div class="mt-3">
                         <div class="flex items-center justify-between text-xs text-gray-600 mb-1">
                             <span>{{ $percentageUsed }}% used</span>
-                            <span>${{ number_format($monthlyBudget - $totalSpent, 2) }} left</span>
+                            <span>₹{{ number_format($monthlyBudget - $totalSpent, 2) }} left</span>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2">
                             <div class="h-2 rounded-full {{ $percentageUsed > 100 ? 'bg-red-500' : ($percentageUsed > 80 ? 'bg-yellow-500' : 'bg-green-500') }}" 
@@ -130,7 +130,7 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <div class="font-bold text-gray-800">${{ number_format($category->total, 2) }}</div>
+                                <div class="font-bold text-gray-800">₹{{ number_format($category->total, 2) }}</div>
                             </div>
                         </div>
                     @empty

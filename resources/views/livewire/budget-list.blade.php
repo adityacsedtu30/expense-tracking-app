@@ -49,7 +49,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
                 <div>
                     <p class="text-sm text-gray-600 dark:text-gray-200 mb-1">Total Budget</p>
-                    <p class="text-2xl font-bold text-gray-400">${{ number_format($totalBudget, 2) }}</p>
+                    <p class="text-2xl font-bold text-gray-400">₹{{ number_format($totalBudget, 2) }}</p>
                 </div>
                 <div>
                     <p class="text-sm text-gray-600 dark:text-gray-200 mb-1">Total Spent</p>
@@ -135,7 +135,7 @@
                             <!-- Amount -->
                             <div class="flex items-center justify-between">
                                 <span class="text-gray-600">Budget</span>
-                                <span class="text-2xl font-bold text-gray-900">${{ number_format($budget->amount, 2) }}</span>
+                                <span class="text-2xl font-bold text-gray-900">₹{{ number_format($budget->amount, 2) }}</span>
                             </div>
 
                             <!-- Progress -->
@@ -157,7 +157,7 @@
                             <div class="pt-2 border-t border-gray-200 space-y-2">
                                 <div class="flex items-center justify-between text-sm">
                                     <span class="text-gray-600">Spent</span>
-                                    <span class="font-semibold text-gray-900">${{ number_format($budget->spent, 2) }}</span>
+                                    <span class="font-semibold text-gray-900">₹{{ number_format($budget->spent, 2) }}</span>
                                 </div>
                                 <div class="flex items-center justify-between text-sm">
                                     <span class="text-gray-600">Remaining</span>
