@@ -54,13 +54,13 @@
                 <div>
                     <p class="text-sm text-gray-600 dark:text-gray-200 mb-1">Total Spent</p>
                     <p class="text-2xl font-bold {{ $totalSpent > $totalBudget ? 'text-red-600' : 'text-gray-400' }}">
-                        ${{ number_format($totalSpent, 2) }}
+                        ₹{{ number_format($totalSpent, 2) }}
                     </p>
                 </div>
                 <div>
                     <p class="text-sm text-gray-400 mb-1">Remaining</p>
                     <p class="text-2xl font-bold {{ $totalRemaining < 0 ? 'text-red-600' : 'text-green-600' }}">
-                        ${{ number_format(abs($totalRemaining), 2) }}
+                        ₹{{ number_format(abs($totalRemaining), 2) }}
                         @if($totalRemaining < 0) <span class="text-sm">over</span> @endif
                     </p>
                 </div>
@@ -164,9 +164,9 @@
                                     <span
                                         class="font-semibold {{ $budget->remaining < 0 ? 'text-red-600' : 'text-green-600' }}">
                                         @if($budget->remaining >= 0)
-                                            ${{ number_format($budget->remaining, 2) }}
+                                            ₹{{ number_format($budget->remaining, 2) }}
                                         @else
-                                            -${{ number_format(abs($budget->remaining), 2) }}
+                                            -₹{{ number_format(abs($budget->remaining), 2) }}
                                         @endif
                                     </span>
                                 </div>
