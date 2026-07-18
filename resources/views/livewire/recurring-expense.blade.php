@@ -51,7 +51,7 @@
                     <div>
                         <p class="text-sm text-gray-600 mb-1">Monthly Total</p>
                         <p class="text-3xl font-bold text-gray-900">
-                            ${{ number_format($recurringExpenses->where('recurring_frequency', 'monthly')->sum('amount'), 2) }}
+                            ₹{{ number_format($recurringExpenses->where('recurring_frequency', 'monthly')->sum('amount'), 2) }}
                         </p>
                     </div>
                     <div class="p-3 bg-purple-100 rounded-lg">
